@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AGB-Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AGB-Analyzer</h1>
+            <div id="status" class="status">
+                <div class="status-icon"></div>
+                <span class="status-text">Bereit zum Scannen</span>
+            </div>
+        </header>
+
+        <main>
+            <div id="result" class="result hidden">
+                <h2>Analyse-Ergebnis</h2>
+                <div class="score-container">
+                    <div class="overall-score">
+                        <div id="rating-indicator" class="rating-indicator"></div>
+                        <span id="rating-text" class="rating-text">Noch keine Analyse</span>
+                    </div>
+                    
+                    <div class="detailed-scores">
+                        <div class="score-item">
+                            <label>DSGVO-Compliance:</label>
+                            <div class="progress-bar">
+                                <div id="dsgvo-score" class="progress"></div>
+                            </div>
+                        </div>
+                        <div class="score-item">
+                            <label>Verbraucherrechte:</label>
+                            <div class="progress-bar">
+                                <div id="consumer-score" class="progress"></div>
+                            </div>
+                        </div>
+                        <div class="score-item">
+                            <label>Transparenz:</label>
+                            <div class="progress-bar">
+                                <div id="transparency-score" class="progress"></div>
+                            </div>
+                        </div>
+                        <div class="score-item">
+                            <label>Fairness:</label>
+                            <div class="progress-bar">
+                                <div id="fairness-score" class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="details" class="details">
+                    <h3>Details</h3>
+                    <ul id="details-list"></ul>
+                </div>
+            </div>
+
+            <div id="no-agb" class="message hidden">
+                <p>Keine AGBs auf dieser Seite gefunden.</p>
+            </div>
+
+            <div id="error" class="message error hidden">
+                <p>Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.</p>
+            </div>
+        </main>
+
+        <footer>
+            <button id="analyze-btn" class="button">AGBs analysieren</button>
+        </footer>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
